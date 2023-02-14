@@ -1,0 +1,14 @@
+{
+    "students":[
+  {"position": 1, "name": "Aakash Jain",  "bloodGroup": "A","branch":"IT","rollNo":"0905IT101001"},
+  {"position": 2, "name": "Aaryan Malhotra",  "bloodGroup": "B","branch":"IT","rollNo":"0905IT101002"},
+  {"position": 3, "name": "Banchor Singh",  "bloodGroup": "B","branch":"IT","rollNo":"0905IT101003"},
+  {"position": 4, "name": "Bani Singh",  "bloodGroup": "O","branch":"IT","rollNo":"0905IT101004"},
+  {"position": 5, "name": "Diya Gupta",  "bloodGroup": "AB","branch":"IT","rollNo":"0905IT101005"},
+  {"position": 6, "name": "Dvij Nayak",  "bloodGroup": "B","branch":"IT","rollNo":"0905IT101006"},
+  {"position": 7, "name": "Gauri Sharma",  "bloodGroup": "O","branch":"IT","rollNo":"0905IT101007"},
+  {"position": 8, "name": "Harman Kaur",  "bloodGroup": "A","branch":"IT","rollNo":"0905IT101008"},
+  {"position": 9, "name": "Ishaan Mathur",  "bloodGroup": "B","branch":"IT","rollNo":"0905IT101009"},
+  {"position": 10, "name": "Jimmy Mishra",  "bloodGroup": "B","branch":"IT","rollNo":"0905IT101010"}
+    ]
+}
