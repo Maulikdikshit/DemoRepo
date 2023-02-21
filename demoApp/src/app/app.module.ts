@@ -11,6 +11,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import { SharedModule } from './shared/shared.module';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+
 
 
 
@@ -19,7 +23,8 @@ import { SharedModule } from './shared/shared.module';
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    LandingPageComponent
   ],
   imports: [
     
@@ -30,6 +35,7 @@ import { SharedModule } from './shared/shared.module';
     MatCheckboxModule,
     MatButtonModule,
     SharedModule
+   
   
   ],
   providers: [],

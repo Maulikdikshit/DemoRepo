@@ -15,4 +15,8 @@ export class MaterialTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onRowClick(){
+    console.log("row was clicked");
+  }
+
 }
