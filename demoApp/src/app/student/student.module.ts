@@ -7,11 +7,14 @@ import { StudentService } from "./student.service";
 import {MatTableModule} from '@angular/material/table';
 import { CommonModule } from "@angular/common";
 import { SharedModule } from "../shared/shared.module";
+import { StudentDescriptionComponent } from './student-description/student-description.component';
+import { StuPersonalDescComponent } from './stu-personal-desc/stu-personal-desc.component';
 
 
 
 const studentRoutes:Routes = [
-    {path:'',component:StudentListComponent}
+    {path:'',component:StudentListComponent},
+    {path:'studentInfo',component:StudentDescriptionComponent}
 ]
 
 
@@ -26,7 +29,9 @@ const studentRoutes:Routes = [
         SharedModule
     ],
     declarations:[
-    StudentListComponent
+    StudentListComponent,
+    StudentDescriptionComponent,
+    StuPersonalDescComponent
   ],
     exports:[RouterModule],
     providers:[StudentService]

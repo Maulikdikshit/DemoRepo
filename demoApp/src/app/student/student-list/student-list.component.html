@@ -14,7 +14,11 @@
 
 </table> -->
 
-<app-material-table [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-material-table>
+<!-- <app-student-description></app-student-description> -->
+
+<app-material-table [dataSource]="dataSource" [displayedColumns]="displayedColumns" (rowData) = "clickedRow($event)"></app-material-table>
+
+
 
 
  <!-- <ng-container matColumnDef="position">

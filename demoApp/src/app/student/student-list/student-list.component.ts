@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StudentService } from '../student.service';
 
 @Component({
@@ -10,15 +11,21 @@ export class StudentListComponent implements OnInit {
 
   displayedColumns!: string[];
   dataSource: any;
-  constructor(private studentService:StudentService) { }
+  constructor(private studentService:StudentService,private router:Router,private  route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.displayedColumns = ['position', 'name','bloodGroup','branch','rollNo'];
 
-this.studentService.getStudentInfo().subscribe((data) => {
-    console.log('student data',data);
-    this.dataSource = data.students;
-})
+    this.studentService.getStudentInfo().subscribe((data) => {
+      console.log('student data',data);
+      this.dataSource = data.students;
+    })
+  }
+
+  clickedRow($event:any){
+    console.log('student list event received',$event);
+    this.router.navigate(['studentInfo'],{ relativeTo: this.route });
+
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-material-table',
@@ -9,14 +9,16 @@ export class MaterialTableComponent implements OnInit {
 
   @Input() dataSource: any;
   @Input() displayedColumns: any;
+  @Output() rowData = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onRowClick(){
-    console.log("row was clicked");
+  onRowClick(row:any){
+    console.log("row was clicked",row);
+    this.rowData.emit(row);
   }
 
 }
