@@ -1,0 +1,9 @@
+{
+    "studentDesc":{
+        "name":"Aakash Jain",
+        "age":20,
+        "bloodGroup":"A",
+        "mobile":9876543210,
+        "emailId":"akashJain@gmail.com"
+    }
+}

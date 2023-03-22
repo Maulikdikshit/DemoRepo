@@ -1,1 +1,66 @@
-<p>stu-personal-desc works!</p>
+<!-- <p>stu-personal-desc works!</p> -->
+<form class="form-signin" [formGroup] = "personalDescForm" (ngSubmit)="onSubmit(personalDescForm)" >
+    <!-- <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">First Try</h1>
+    </div> -->
+    <div class="container">
+      <div class="row">
+        <!-- <label for="name">Name</label>
+        <input type="text" id="name" formControlName="name" placeholder="Enter the name" (input)="onInput($event)"> -->
+        <app-input-component       
+          [placeholder]="'Enter Your Name'"
+          [isRequired]="true"
+          [errorMsg]="'Please enter your name'"
+          [label] = "'Name'"
+          [pattern]="'[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}'"      
+          formControlName="name"
+          class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        </app-input-component>
+
+        <app-input-component 
+          [placeholder]="'Enter Your Age'"
+          [isRequired]="true"
+          [errorMsg]="'Please enter your name'"
+          [label] = "'Age'"
+          [pattern]="'[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}'"
+          formControlName="age"
+          class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        </app-input-component>
+      </div>
+      <div class="row">
+        <app-input-component 
+          [placeholder]="'Enter Your Mobile No.'"
+          [isRequired]="true"
+          [errorMsg]="'Please enter your Mobile number'"
+          [label] = "'Number'"
+          [pattern]="'[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}'"
+          formControlName="mobNum"
+          class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        </app-input-component>
+
+        <app-input-component 
+          [placeholder]="'Enter Your Email Id.'"
+          [isRequired]="true"
+          [errorMsg]="'Please enter your Email Id'"
+          [label] = "'Email'"
+          [pattern]="'[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}'"
+          formControlName="emailId"
+          class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        </app-input-component>
+      </div>
+      <div class="row">
+        <app-input-component 
+          [placeholder]="'Enter Your Blood Group'"
+          [isRequired]="true"
+          [errorMsg]="'Please enter your Blood Group'"
+          [label] = "'Blood Group'"
+          [pattern]="'[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}'"
+          formControlName="bloodGroup"
+          class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        </app-input-component>
+      </div>
+    </div>
+    
+      <!-- [disabled]="!f.valid" -->
+    <button class="btn btn-lg btn-primary btn-block"  type="submit">Sign in</button>
+  </form>

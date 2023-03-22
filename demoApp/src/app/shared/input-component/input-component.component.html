@@ -1,0 +1,14 @@
+<!-- <p>input-component works!</p> -->
+
+
+<div class="form-label-group">
+    <label class="mr-auto">{{label}}
+        <span class="required" *ngIf="isRequired">*</span>
+    </label>
+    <input class="form-control" [type]="type" (input) = "onInputChange($event)"
+    [value]="assVal"
+        >
+
+    <!-- *ngIf="!input.valid" -->
+    <!-- <span class="error"  >{{errorMsg}}</span> -->
+</div>
